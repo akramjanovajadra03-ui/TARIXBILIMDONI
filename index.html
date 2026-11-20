@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarix | Milliy sertifikat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="neon top"></div>
+  <div class="neon bottom"></div>
+
+  <main class="container">
+    <header>
+      <div class="logo">TARIX<span> TEST</span></div>
+      <p>MILLIY SERTIFIKAT DARAJASIDA SINOV</p>
+    </header>
+
+    <section id="startScreen" class="panel">
+      <h1>Tarix bilimlaringizni sinang!</h1>
+      <p class="muted">O‘zbekiston va jahon tarixi bo‘yicha test</p>
+
+      <label>Ism va familiya</label>
+      <input id="studentName" placeholder="Ism va familiyangizni kiriting">
+
+      <label>Milliy sertifikat darajasini tanlang</label>
+      <div class="levels">
+        <button class="level" data-level="A+">A+</button>
+        <button class="level" data-level="A">A</button>
+        <button class="level" data-level="B+">B+</button>
+        <button class="level" data-level="B">B</button>
+        <button class="level" data-level="C+">C+</button>
+        <button class="level active" data-level="C">C</button>
+      </div>
+
+      <button id="startBtn" class="main-btn">TESTNI BOSHLASH</button>
+      <p class="muted small">10 ta savol · 20 soniya · 4 ta javob</p>
+    </section>
+
+    <section id="quizScreen" class="panel hidden">
+      <div class="quiz-info">
+        <span id="questionNumber">1 / 10</span>
+        <span id="timer">20</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback"></p>
+    </section>
+
+    <section id="resultScreen" class="panel hidden">
+      <h1>TEST YAKUNLANDI!</h1>
+      <p id="studentResult" class="student"></p>
+
+      <div class="score-box">
+        <div><strong id="score">0</strong><small>Ball</small></div>
+        <div><strong id="correctCount">0</strong><small>To‘g‘ri</small></div>
+        <div><strong id="wrongCount">0</strong><small>Noto‘g‘ri</small></div>
+      </div>
+
+      <p id="levelResult" class="level-result"></p>
+      <h2 class="review-title">TO‘G‘RI JAVOBLAR TAHLILI</h2>
+      <div id="answerReview" class="review"></div>
+
+      <button class="main-btn" onclick="location.reload()">QAYTA TEST TOPSHIRISH</button>
+    </section>
+
+    <footer>
+      Loyiha muallifi: <strong>AKRAMJONOVA JADRA MARATOVNA</strong>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
